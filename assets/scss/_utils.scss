@@ -1,0 +1,38 @@
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-secondary {
+  font-family: 'WorkSans-Light', sans-serif;
+  font-size: 14px;
+  color: $light-secondary-text;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.destructive {
+  .gdd-icon,
+  .mat-icon {
+    color: var(--color-red) !important;
+  }
+}
+
+.hidden-from-view {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute !important;
+}

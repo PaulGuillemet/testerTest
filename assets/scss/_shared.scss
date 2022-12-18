@@ -1,0 +1,61 @@
+@use "src/assets/scss/text";
+@import "_variables";
+
+// Buttons
+.gdd-btn-full {
+  width: 320px;
+  font-family: "WorkSans-Medium", sans-serif;
+  background: $light-primary;
+  color: white;
+}
+
+// Modals
+mat-dialog-container.mat-dialog-container {
+  border-radius: 1rem;
+  height: unset;
+  margin: 15px;
+}
+
+// Menu
+.mat-menu-panel {
+  @include card-shadow();
+  border-radius: 8px;
+
+  .mat-menu-item {
+    color: var(--color-text-neutral-body);
+    display: flex !important;
+    align-items: center;
+
+    span {
+      @include text.body("Medium", "sm");
+    }
+
+    .mat-icon,
+    .gdd-icon {
+      color: var(--color-icon);
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+// Lists
+ul {
+  padding-inline-start: 16px;
+}
+
+.loading {
+  position: relative;
+
+  &:after {
+      content : " ";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255, 0.7);
+      z-index: 100;
+  }
+}

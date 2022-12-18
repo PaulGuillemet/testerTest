@@ -1,0 +1,393 @@
+
+.material-icons,
+.material-icons-outlined,
+.material-icons-filled {
+  font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  /* stylelint-disable property-no-vendor-prefix */
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+
+  &[size='s'] {
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+  }
+
+  &[size='l'] {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+  }
+
+  &[size='xl'] {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.icon-valid {
+  color: #22d788;
+  box-shadow: inset 0 0 0 5px #22d788;
+  background: white;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.icon-invalid,
+.material-icons[color='warning'] {
+  color: #f53669;
+  box-shadow: inset 0 0 0 5px #f53669;
+  background: white;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.gdd-icon {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: currentcolor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  &-outlined,
+  &-outlined.material-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $light-accent-2;
+    border: 2px solid $light-accent-2;
+    border-radius: 2rem;
+    height: 3rem;
+    font-size: 2rem;
+    width: 3rem;
+    min-width: 3rem;
+    text-align: center;
+    line-height: 2;
+  }
+
+  // &__plant {
+  //   mask-image: url('~src/assets/icons/nuclear_plant-black-24dp.svg');
+  // }
+
+  // &__incognito {
+  //   mask-image: url('~src/assets/icons/incognito-black-24dp.svg');
+  // }
+
+  // &__incognito-exclamation {
+  //   mask-image: url('~src/assets/icons/incognito_exclamation-black-24dp.svg');
+  // }
+
+  // &__incognito-add {
+  //   mask-image: url('~src/assets/icons/incognito_add-black-24dp.svg');
+  // }
+
+  // &__forbidden {
+  //   mask-image: url('~src/assets/icons/forbidden-black-24dp.svg');
+  // }
+
+  &__warning {
+    mask-image: url('~src/assets/icons/warning-black-24dp.svg');
+  }
+
+  &__box {
+    mask-image: url('~src/assets/icons/box-black-24dp.svg');
+  }
+
+  // &__image {
+  //   mask-image: url('~src/assets/icons/image-black-24dp.svg');
+  // }
+
+  // &__assignment {
+  //   mask-image: url('~src/assets/icons/assignment-black-24dp.svg');
+  // }
+
+  // &__help {
+  //   mask-image: url('~src/assets/icons/help-black-24dp.svg');
+  // }help_center_24.svg
+
+  &__help_center {
+    mask-image: url('~src/assets/icons/help_center_24.svg');
+  }
+
+  &__live_help {
+    mask-image: url('~src/assets/icons/live_help_24.svg');
+  }
+
+  &__edit {
+    mask-image: url('~src/assets/icons/edit-black-24dp.svg');
+  }
+
+  &__edit_write {
+    mask-image: url('~src/assets/icons/edit_write-black-24dp.svg');
+  }
+
+  &__check {
+    mask-image: url('~src/assets/icons/check-black-24dp.svg');
+  }
+
+  // &__priority_high {
+  //   mask-image: url('~src/assets/icons/priority_high-black-24dp.svg');
+  // }
+
+  // &__hourglass_full {
+  //   mask-image: url('~src/assets/icons/hourglass_full-black-24dp.svg');
+  // }
+
+  // &__publish {
+  //   mask-image: url('~src/assets/icons/publish-black-24dp.svg');
+  // }
+
+  &__add {
+    mask-image: url('~src/assets/icons/add-black-24dp.svg');
+  }
+
+  &__back {
+    mask-image: url('~src/assets/icons/back_arrow-black-24dp.svg');
+  }
+
+  &__arrow_back_ios {
+    mask-image: url('~src/assets/icons/arrow_back_ios-black-24dp.svg');
+  }
+
+  &__arrow_forward_ios {
+    mask-image: url('~src/assets/icons/arrow_forward_ios-black-24dp.svg');
+  }
+
+  &__info {
+    mask-image: url('~src/assets/icons/info-black-24dp.svg');
+  }
+
+  // &__filter_alt {
+  //   mask-image: url('~src/assets/icons/filter_alt-black-24dp.svg');
+  // }
+
+  &__close {
+    mask-image: url('~src/assets/icons/close-black-24dp.svg');
+  }
+
+  &__delete {
+    mask-image: url('~src/assets/icons/delete-black-24dp.svg');
+  }
+
+  // &__get_app {
+  //   mask-image: url('~src/assets/icons/get_app-black-24dp.svg');
+  // }
+
+  // &__cloud_upload {
+  //   mask-image: url('~src/assets/icons/cloud_upload-black-24dp.svg');
+  // }
+
+  &__cloud_download {
+    mask-image: url('~src/assets/icons/cloud_download-black-24dp.svg');
+  }
+
+  // &__offline_download {
+  //   mask-image: url('~src/assets/icons/download_for_offline_black_24dp.svg');
+  // }
+
+  // &__refresh {
+  //   mask-image: url('~src/assets/icons/refresh-black-24dp.svg');
+  // }
+
+  // &__error {
+  //   mask-image: url('~src/assets/icons/error-black-24dp.svg');
+  // }
+
+  // &__sync {
+  //   mask-image: url('~src/assets/icons/sync-black-24dp.svg');
+  // }
+
+  // &__check_circle {
+  //   mask-image: url('~src/assets/icons/check_circle-black-24dp.svg');
+  // }
+
+  &__more_vert {
+    mask-image: url('~src/assets/icons/more_vert-black-24dp.svg');
+  }
+
+  &__delete_forever {
+    mask-image: url('~src/assets/icons/delete_forever.svg');
+  }
+
+  &__chevron_right {
+    mask-image: url('~src/assets/icons/chevron_right-black-24dp.svg');
+  }
+
+  &__menu {
+    mask-image: url('~src/assets/icons/menu-black-24dp.svg');
+  }
+
+  // &__delete_outline {
+  //   mask-image: url('~src/assets/icons/delete_outline-black-24dp.svg');
+  // }
+
+  &__logout {
+    mask-image: url('~src/assets/icons/logout.svg');
+  }
+
+  &__notifications {
+    mask-image: url('~src/assets/icons/notifications.svg');
+  }
+
+  // &__policy {
+  //   mask-image: url('~src/assets/icons/policy-black-24dp.svg');
+  // }
+
+  // &__download {
+  //   mask-image: url('~src/assets/icons/download-black-24dp.svg');
+  // }
+
+  // &__catching_pokemon {
+  //   mask-image: url('~src/assets/icons/catching_pokemon-black-24dp.svg');
+  // }
+
+  // &__update {
+  //   mask-image: url('~src/assets/icons/update_black_24dp.svg');
+  // }
+
+  &__home {
+    mask-image: url('~src/assets/icons/home-black-24dp.svg');
+  }
+
+  // &__quiz {
+  //   mask-image: url('~src/assets/icons/quiz_black_24dp.svg');
+  // }
+
+  // &__fact_check {
+  //   mask-image: url('~src/assets/icons/fact_check_black_24dp.svg');
+  // }
+
+  // &__equalizer {
+  //   mask-image: url('~src/assets/icons/equalizer_black_24dp.svg');
+  // }
+
+  // &__manage_search {
+  //   mask-image: url('~src/assets/icons/manage_search_black_24dp.svg');
+  // }
+
+  &__person {
+    mask-image: url('~src/assets/icons/person_black_24dp.svg');
+  }
+
+  &__search {
+    mask-image: url('~src/assets/icons/search-black-24dp.svg');
+  }
+
+  // &__badge {
+  //   mask-image: url('~src/assets/icons/badge_black_24dp.svg');
+  // }
+
+  // &__photo_camera_round {
+  //   mask-image: url('~src/assets/icons/photo_camera_black_rounded_24dp.svg');
+  // }
+
+  // &__photo_camera {
+  //   mask-image: url('~src/assets/icons/photo_camera_black_24dp.svg');
+  // }
+
+  // &__terrain {
+  //   mask-image: url('~src/assets/icons/terrain_black_24dp.svg');
+  // }
+
+  // &__speaker_notes {
+  //   mask-image: url('~src/assets/icons/speaker_notes_black_24dp.svg');
+  // }
+
+  &__chevron_left {
+    mask-image: url('~src/assets/icons/chevron_left_black_24dp.svg');
+  }
+
+  // &__subject {
+  //   mask-image: url('~src/assets/icons/subject_black_24dp.svg');
+  // }
+
+  // &__done {
+  //   mask-image: url('~src/assets/icons/done_black_24dp.svg');
+  // }
+
+  // &__clear {
+  //   mask-image: url('~src/assets/icons/clear_black_24dp.svg');
+  // }
+
+  // &__chat {
+  //   mask-image: url('~src/assets/icons/chat_black_24dp.svg');
+  // }
+
+  &__cancel {
+    mask-image: url('~src/assets/icons/cancel_24.svg');
+  }
+
+  &__file_graphs {
+    mask-image: url('~src/assets/icons/file_graphs-black-24dp.svg');
+  }
+
+  &__lock {
+    mask-image: url('~src/assets/icons/lock-black-24dp.svg');
+  }
+
+  &__lock-unlocked {
+    mask-image: url('~src/assets/icons/lock_unlocked-black-24dp.svg');
+  }
+
+  &__document {
+    mask-image: url('~src/assets/icons/document-black-24dp.svg');
+  }
+
+  &__no_document {
+    mask-image: url('~src/assets/icons/no_document-black-24dp.svg');
+  }
+
+  &__investigation {
+    mask-image: url('~src/assets/icons/investigation-black-24dp.svg');
+  }
+  
+  &__incomplete {
+    mask-image: url('~src/assets/icons/incomplete-black-24dp.svg');
+  }
+  
+  &__settings {
+    mask-image: url('~src/assets/icons/settings-black-24dp.svg');
+  }
+
+  &__database {
+    mask-image: url('~src/assets/icons/database-black-24dp.svg');
+  }
+
+  &__document-request {
+    mask-image: url('~src/assets/icons/document_request-black-24dp.svg');
+  }
+
+  &__plots {
+    mask-image: url('~src/assets/icons/plots-black-24dp.svg');
+  }
+
+  &__briefcase {
+    mask-image: url('~src/assets/icons/briefcase-black-24dp.svg');
+  }
+
+  &__cube-outline {
+    mask-image: url('~src/assets/icons/cube_outline-black-24dp.svg');
+  }
+
+  &__key {
+    mask-image: url('~src/assets/icons/key-black-24dp.svg');
+  }
+
+  &__eye {
+    mask-image: url('~src/assets/icons/eye-black-24dp.svg');
+  }
+}
