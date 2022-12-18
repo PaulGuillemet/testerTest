@@ -1,0 +1,115 @@
+<div *ngIf="onFirefox">Ce navigateur n'est pas supporté</div>
+
+<div class="private-networks" [ngClass]="onFirefox ? 'hidden-from-view' : ''">
+  <div class="page-header">
+    <div class="page-header__info">
+      <div>
+        <div class="page-header__title">Référentiel des réseaux</div>
+        <div class="page-header__subtitle">Voir et gérer tous les réseaux</div>
+      </div>
+    </div>
+    <div class="page-header__actions">
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn-md"
+        (click)="openEditionDialog()"
+      >
+        <div class="add-icon gdd-icon gdd-icon__add"></div>
+        Ajouter un réseau
+      </button>
+    </div>
+  </div>
+
+  <!-- <nav mat-tab-nav-bar>
+  <a matTabLink (click)="setIsEnabledTab(true)" [active]="isEnabledTab">
+    Actifs
+  </a>
+  <a matTabLink (click)="setIsEnabledTab(false)" [active]="!isEnabledTab">
+    Désactivés
+  </a>
+</nav> -->
+
+  <div class="tab-content">
+    <!--  <div class="field-wrapper search-field" *ngIf="!errorDisplay">
+      <mat-form-field appearance="outline">
+        <mat-label>Rechercher par nom</mat-label>
+        <input
+          autocomplete="off"
+          matInput
+          [(ngModel)]="searchText"
+          (ngModelChange)="refreshPrivateNetworks()"
+        />
+        <span matSuffix class="gdd-icon gdd-icon__search"></span>
+      </mat-form-field>
+    </div> -->
+
+    <h4 *ngIf="!!numberOfResults">Liste des réseaux</h4>
+
+    <app-async-table
+      [dataSource]="dataSource"
+      [displayedColumns]="displayedColumns"
+      matSort
+      (matSortChange)="doSort($event)"
+    >
+      <ng-container matColumnDef="name">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Nom du réseau</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fluidType">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Type</th>
+        <td mat-cell *matCellDef="let element">
+          {{ fluidTypeLabels[element.fluidType] }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="networkSensitivity">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Sensibilite</th>
+        <td mat-cell *matCellDef="let element">
+          {{ networkSensitivityLabels[element.networkSensitivity] }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="code">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Code</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.code || "-" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.description || "-" }}
+        </td>
+      </ng-container>
+    </app-async-table>
+    <mat-paginator
+      [ngClass]="{ 'hidden-from-view': true }"
+      [length]="numberOfResults"
+      [pageSizeOptions]="[20, 50, 100]"
+      showFirstLastButtons
+    ></mat-paginator>
+    <app-empty-state
+      *ngIf="
+        !errorDisplay && !numberOfResults && !(dataSource.loading$ | async)
+      "
+      illustrationType="documents"
+      >Aucun réseau</app-empty-state
+    >
+  </div>
+
+  <app-error-state
+    *ngIf="!!errorDisplay"
+    [retryPossible]="!!errorDisplay.retryable"
+    [retryOngoing]="dataSource.loading$ | async"
+    (btnClicked)="refreshLandPlots()"
+  >
+    Impossible de récupérer les réseaux privés.<br />{{ errorDisplay.message }}
+  </app-error-state>
+  <esn-loader
+    [centered]="true"
+    *ngIf="(dataSource.loading$ | async) && !numberOfResults && !errorDisplay"
+  ></esn-loader>
+</div>

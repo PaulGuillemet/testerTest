@@ -1,0 +1,38 @@
+<mat-progress-bar
+  mode="indeterminate"
+  *ngIf="isUpdateOngoing"
+></mat-progress-bar>
+
+<div
+  class="dialog"
+  [ngClass]="{
+    loading: isUpdateOngoing,
+    'fullscreen-dialog': isFullScreenDialog
+  }"
+>
+  <div [ngClass]="{ container: isFullScreenDialog }">
+    <div class="dialog__header">
+      <div class="dialog__title">{{ title }}</div>
+      <span class="dialog__close-button">
+        <span class="gdd-icon gdd-icon__close"></span>
+      </span>
+    </div>
+    <div class="dialog__content">
+      <ng-content></ng-content>
+    </div>
+    <div class="dialog__actions">
+      <div [ngClass]="{ container: isFullScreenDialog }">
+        <button mat-button mat-dialog-close class="btn-md">Annuler</button>
+        <button
+          mat-flat-button
+          class="btn-md"
+          color="primary"
+          [disabled]="isConfirmDisabled"
+          (click)="onValidateClick()"
+        >
+          {{ confirmText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

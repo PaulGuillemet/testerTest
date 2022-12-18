@@ -1,0 +1,128 @@
+<div class="private-network-dialog">
+  <app-edition-wrapper
+    [title]="(data.isCreation ? 'Créer' : 'Modifier') + ' un réseau'"
+    [isUpdateOngoing]="isUpdateOngoing"
+    [isConfirmDisabled]="!form.valid || !wasFormModified"
+    [confirmText]="data.isCreation ? 'Créer' : 'Modifier'"
+    [wasFormModified]="wasFormModified"
+    (cancel)="onCancelClick()"
+    (confirm)="onValidateClick()"
+  >
+    <form [formGroup]="form">
+      <div class="private-network-status" *ngIf="!data.isCreation">
+        <mat-slide-toggle formControlName="enabled">{{
+          form.get("enabled").value ? "Active" : "Désactivée"
+        }}</mat-slide-toggle>
+      </div>
+
+      <div class="field-wrapper">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nom du réseau</mat-label>
+          <input
+            id="name"
+            cdkFocusInitial
+            autocomplete="off"
+            matInput
+            formControlName="name"
+            maxlength="20"
+          />
+          <mat-hint align="end"
+            >{{ (this.form.value.name || []).length }}/20</mat-hint
+          >
+          <mat-error *ngIf="form.get('name').errors?.['forbiddenValue']"
+            >Ce nom est déjà associé à un autre réseau</mat-error
+          >
+        </mat-form-field>
+        <div class="error-hint"></div>
+      </div>
+
+      <div class="field-wrapper">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Type de réseau</mat-label>
+          <mat-select
+            placeholder="Choisissez un type de fluide"
+            formControlName="fluidType"
+          >
+            <mat-option
+              *ngFor="let entry of fluidTypeLabels"
+              [value]="entry[0]"
+              >{{ entry[1] }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="field-wrapper">
+        <!--   <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Sensibilité du réseau</mat-label> -->
+        <!--    <mat-select
+            placeholder="Choisissez une sensibility"
+            formControlName="networkSensitivity"
+          >
+            <mat-option
+              *ngFor="let entry of networkSensitivityLabels"
+              [value]="entry[0]"
+              >{{ entry[1] }}</mat-option
+            >
+          </mat-select> -->
+
+        <mat-radio-group
+          formControlName="networkSensitivity"
+          aria-label="Select an option"
+        >
+          <mat-radio-button
+            *ngFor="let entry of networkSensitivityLabels"
+            [value]="entry[0]"
+            >{{ entry[1] }}</mat-radio-button
+          >
+        </mat-radio-group>
+        <!--    </mat-form-field> -->
+      </div>
+
+      <div class="field-wrapper">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Code</mat-label>
+          <input
+            id="name"
+            autocomplete="off"
+            matInput
+            formControlName="code"
+            maxlength="20"
+          />
+          <mat-hint align="end"
+            >{{ (this.form.value.code || []).length }}/20</mat-hint
+          >
+          <mat-error *ngIf="form.get('code').errors?.['pattern']"
+            >Seuls les caractères numériques sont acceptés pour ce
+            champ</mat-error
+          >
+        </mat-form-field>
+        <div class="error-hint"></div>
+      </div>
+
+      <div class="field-wrapper">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea
+            #technicalInformations
+            autocomplete="off"
+            cdkAutosizeMinRows="4"
+            cdkTextareaAutosize
+            formControlName="description"
+            matInput
+            maxlength="100"
+            name="description"
+            placeholder=""
+          ></textarea>
+          <mat-hint align="end"
+            >{{ (this.form.value.description || []).length }}/100</mat-hint
+          >
+          <mat-error *ngIf="form.get('code').errors?.['forbiddenValue']"
+            >Ce nom est déjà associé à un autre réseau</mat-error
+          >
+        </mat-form-field>
+        <div class="error-hint"></div>
+      </div>
+    </form>
+  </app-edition-wrapper>
+</div>

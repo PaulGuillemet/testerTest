@@ -1,0 +1,14 @@
+.private-networks {
+  padding: 2rem;
+
+  .gdd-icon {
+    margin-right: -7px;
+  }
+}
+::ng-deep .td {
+  white-space: nowrap !important;
+}
+
+::ng-deep .mat-radio-button {
+  margin-right: 16px;
+}

@@ -1,0 +1,225 @@
+// To keep coherent with breakpoints in config.constats.ts
+$breakpoint-mobile: 600px;
+$breakpoint-tablet-sm: 800px;
+$breakpoint-tablet-lg: 1024px;
+
+$padding-mobile: 1rem;
+$padding-tablet: 1.5rem;
+
+// https://fonts.googleapis.com/icon?family=Material+Icons
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(~src/assets/fonts/MaterialIcons.woff2) format("woff2");
+}
+// https://fonts.googleapis.com/icon?family=Material+Icons+Outlined
+@font-face {
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(~src/assets/fonts/MaterialIconsOutlined.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("~src/assets/fonts/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("~src/assets/fonts/Poppins-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("~src/assets/fonts/Poppins-ExtraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("~src/assets/fonts/Poppins-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("~src/assets/fonts/Poppins-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("~src/assets/fonts/Poppins-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Light";
+  src: url("~src/assets/fonts/WorkSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("~src/assets/fonts/WorkSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  src: url("~src/assets/fonts/WorkSans-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: url("~src/assets/fonts/WorkSans-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Design System Light Palette
+$light-background-1: #fff;
+$light-background-2: #f9fcff;
+$light-background-3: #f4f9ff;
+$light-primary: #394e98;
+$light-main-text: #0c273e;
+$light-secondary-text: #a3abc9;
+$light-disabled: #a3abc9;
+$light-divider: #dce4f2;
+$light-accent-1: #1373f3;
+$light-accent-2: #88b8f9;
+
+// Design System Dark Palette
+$dark-background-1: #394e98;
+$dark-background-2: #1373f3;
+$dark-primary: #fff;
+$dark-main-text: #fff;
+$dark-secondary-text: rgba(255, 255, 255, 0.75);
+$dark-disabled: rgba(255, 255, 255, 0.5);
+$dark-divider: rgba(255, 255, 255, 0.25);
+$dark-accent-1: #fff;
+$dark-accent-2: #394e98;
+
+// Other colors
+$red: #f53669;
+$green: #22d788;
+$orange: #ff804f;
+$yellow: #e3d081;
+
+// black & white model
+$grey-0: #2c2a2a;
+$grey-0dot5: #757575;
+$grey-1: #9b9999;
+$grey-2: #d8d8d8;
+$grey-3: #ececec;
+$grey-4: #f5f5f5;
+
+@mixin card-shadow {
+  box-shadow: 0 3px 16px rgba(57, 78, 152, 0.25) !important;
+}
+
+$color-active: #6083c9;
+$color-white: white;
+
+// Buttons on activity forms
+$width-validate-buttons-activity-forms: 322px;
+
+:root {
+  --color-primary: #155eef;
+  --color-primary-1: #0040c1;
+  --color-primary-disabled: #b2ccff;
+
+  --color-background-neutral-1: #f9f9fb;
+  --color-background-neutral-2: #eef1f5;
+  --color-background-neutral-3: #dcdfea;
+
+  --color-background-primary-1: #f5f8ff;
+  --color-background-primary-2: #eff4ff;
+
+  --color-text-neutral-heading: #111322;
+  --color-text-neutral-body: #404968;
+  --color-text-neutral-subtitle: #5d6b98;
+
+  --color-text-primary-heading: var(--color-primary-1);
+  --color-text-primary-body: var(--color-primary-1);
+  --color-text-primary-subtitle: var(--color-primary);
+
+  --color-icon: #7d89b0;
+
+  --color-background-modulebar: var(--color-background-neutral-2);
+  --color-background-sidenav: var(--color-background-neutral-1);
+  --color-sidenav-selected: #d1e0ff;
+
+  --color-app-background: #ffffff;
+
+  --color-divider: #dcdfea;
+  --color-divider-darker: #b9c0d4;
+
+  --color-green: #12b76a;
+  --color-green-lighter: #d1fadf;
+  --color-green-lightest: #ecfdf3;
+  --color-green-darker: #027a48;
+  --color-green-darkest: #054f31;
+
+  --color-blue: #2970ff;
+  --color-blue-lighter: #d1e0ff;
+  --color-blue-lightest: #eff4ff;
+  --color-blue-darker: #004eeb;
+  --color-blue-darkest: #00359e;
+
+  --color-red: #f04438;
+  --color-red-lighter: #fee4e2;
+  --color-red-lightest: #fef3f2;
+  --color-red-darker: #b42318;
+  --color-red-darkest: #7a271a;
+
+  --color-orange: #fdb022;
+  --color-orange-lighter: #fef0c7;
+  --color-orange-lightest: #fffaeb;
+  --color-orange-darker: #b54708;
+  --color-orange-darkest: #7a2e0e;
+}
+
+.dark-mode {
+    --color-background-neutral-1: #30374F;
+    --color-background-neutral-2: #404968;
+    --color-background-neutral-3: #4A5578;
+
+    --color-background-primary-1: #00359E;
+    --color-background-primary-2: #0040C1;
+
+    --color-text-neutral-heading: #FFFFFF;
+    --color-text-neutral-body: #F9F9FB;
+    --color-text-neutral-subtitle: #EFF1F5;
+
+    --color-text-primary-heading: #F5F8FF;
+    --color-text-primary-body: #EEF4FF;
+    --color-text-primary-subtitle: #E0EAFF;
+
+    --color-icon: #B9C0D4; // OR #DCDFEA
+
+    --color-background-modulebar: var(--color-background-neutral-2);
+    --color-background-sidenav: var(--color-background-neutral-1);
+    --color-sidenav-selected: #d1e0ff;
+
+    --color-app-background: var(--color-background-neutral-1);
+
+    --color-divider: #4A5578;
+    --color-divider-darker: #5D6B98;
+}

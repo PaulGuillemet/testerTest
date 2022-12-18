@@ -1,0 +1,14 @@
+<div
+  class="table-wrapper"
+  [ngClass]="{
+    'hidden-from-view': !numberOfResults,
+    loading: dataSource.loading$ | async
+  }"
+>
+  <table mat-table [dataSource]="dataSource">
+    <ng-content></ng-content>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

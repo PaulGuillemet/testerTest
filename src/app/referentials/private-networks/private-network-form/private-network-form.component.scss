@@ -1,0 +1,10 @@
+.private-network-dialog {
+  min-width: 27rem;
+
+  .private-network-status {
+      border-radius: 8px;
+      background: var(--color-background-neutral-1);
+      margin-bottom: 2rem;
+      padding: 1rem;
+  }
+}
